@@ -28,3 +28,6 @@ function makeColumns(num) {
 
 makeRows(16);
 makeColumns(16);
+
+let cellUnit = document.querySelectorAll('.cell').forEach(item => item.addEventListener('mouseover', event => { item.style.backgroundColor = 'blue' }));
+
