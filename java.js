@@ -1,4 +1,5 @@
 let container = document.getElementById('container');
+let panel = document.getElementById('panel');
 let rows = document.getElementsByClassName("gridRow");
 let cells = document.getElementsByClassName("cell");
 
@@ -34,15 +35,14 @@ function makeColumns(num) {
 
 function clear() {
     allCells.forEach(item => item.style.backgroundColor = 'white');
+
 }
 
 makeGrid(16);
 let allCells = document.querySelectorAll('.cell');
 let cellUnit = document.querySelectorAll('.cell').forEach(item => item.addEventListener('mouseover', event => { item.style.backgroundColor = 'blue' }));
 
-
-
 clearButton = document.createElement('button');
 clearButton.textContent = "Clear";
-container.appendChild(clearButton);
+panel.appendChild(clearButton);
 clearButton.addEventListener('click', clear);

@@ -1,13 +1,29 @@
 body {
     margin: 30px;
     padding: 30px;
+    gap: 40px;
+    background-color: #EFE2BA;
+    font-family: sans-serif;
+
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 64px;
+}
+
+#display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    flex: 0 0 auto;
+
 }
 
 #container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: white;
 
 }
 
@@ -25,8 +41,10 @@ body {
 
 button {
     border: 2px solid black;
+    font-family: sans-serif;
+    background-color: #C5CBE3;
     border-radius: 8px;
-    padding: 10px;
+    padding: 10px 32px;
 }
 
 button:hover{
@@ -34,3 +52,18 @@ button:hover{
     border: 2px solid yellow;
 }
 
+#slideContainer {
+    width: 100%;
+}
+
+#slider {
+    -webkit-appearance: none;
+    background: #acacac  ;
+    width: 50%;
+    height: 20px;
+    opacity: 2;
+}
+
+#slider:hover {
+    opacity: 1;
+}
