@@ -2,9 +2,15 @@ let container = document.getElementById('container');
 let rows = document.getElementsByClassName("gridRow");
 let cells = document.getElementsByClassName("cell");
 
+
+
+function makeGrid(num) {
+
+    makeRows(num);
+    makeColumns(num)
+}
+
 function makeRows(num) {
-
-
 
     for (let i = 0; i < num; i++) {
         let row = document.createElement('div');
@@ -26,8 +32,17 @@ function makeColumns(num) {
 
 }
 
-makeRows(16);
-makeColumns(16);
+function clear() {
+    allCells.forEach(item => item.style.backgroundColor = 'white');
+}
 
+makeGrid(16);
+let allCells = document.querySelectorAll('.cell');
 let cellUnit = document.querySelectorAll('.cell').forEach(item => item.addEventListener('mouseover', event => { item.style.backgroundColor = 'blue' }));
 
+
+
+clearButton = document.createElement('button');
+clearButton.textContent = "Clear";
+container.appendChild(clearButton);
+clearButton.addEventListener('click', clear);
