@@ -39,21 +39,34 @@ function makeColumns(num) {
 
 }
 
+function deleteGrid() {
+    while (container.firstChild) {
+        console.log(`container first child: ${container.firstChild}`)
+        container.lastChild = null;
+        container.removeChild(container.lastChild);
+    }
+}
+
 function clear() {
+    let allCells = document.querySelectorAll('.cell');
     allCells.forEach(item => item.style.backgroundColor = 'white');
 
 }
 
-function updateGrid() {
+makeGrid();
+activateFeatures();
 
+function activateFeatures() {
+    let allCells = document.querySelectorAll('.cell');
+    let cellUnit = document.querySelectorAll('.cell').forEach(item => item.addEventListener('mouseover', event => { item.style.backgroundColor = 'black' }));
+    clearButton.addEventListener('click', clear);
 
 }
 
-makeGrid();
 
+userInput.addEventListener('change', function () {
+    deleteGrid();
+    makeGrid(userInput.value);
+    activateFeatures();
 
-let allCells = document.querySelectorAll('.cell');
-let cellUnit = document.querySelectorAll('.cell').forEach(item => item.addEventListener('mouseover', event => { item.style.backgroundColor = 'blue' }));
-
-
-clearButton.addEventListener('click', clear);
+});
