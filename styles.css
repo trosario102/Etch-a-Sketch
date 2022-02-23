@@ -19,11 +19,33 @@ h1 {
     align-items: center;
     gap: 32px;
     flex: 0 0 auto;
+}
 
+#panel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 #container {
+    /* background-color: white;
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fit, minmax(9%, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(9%, 1fr));
+    max-height: 673px;
+    max-width: 673px; */
+
     background-color: white;
+    justify-content: stretch;
+    align-items: stretch;
+    margin-top: 25px;
+    margin-right: 40px;
+    /* grid-template-columns: repeat(16, 2fr);
+    grid-template-rows: repeat(16, 2fr); */
+    border: 5px solid black;
+    border-radius: 3px;
+    height: 673px;
+    width: 673px;
 
 }
 
@@ -52,18 +74,3 @@ button:hover{
     border: 2px solid yellow;
 }
 
-#slideContainer {
-    width: 100%;
-}
-
-#slider {
-    -webkit-appearance: none;
-    background: #acacac  ;
-    width: 50%;
-    height: 20px;
-    opacity: 2;
-}
-
-#slider:hover {
-    opacity: 1;
-}
