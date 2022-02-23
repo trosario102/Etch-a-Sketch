@@ -8,10 +8,21 @@ let cells = document.getElementsByClassName("cell");
 
 
 function makeGrid(num) {
-    num = num || 16;
 
-    makeRows(num);
-    makeColumns(num)
+    if (num > 100) {
+        alert("Enter an integer between 1 and 100")
+        return;
+    } else if (num <= 0) {
+        alert("Enter an integer between 1 and 100")
+        return;
+    } else {
+        num = num || 16;
+
+        makeRows(num);
+        makeColumns(num)
+
+    }
+
 }
 
 function makeRows(num) {
